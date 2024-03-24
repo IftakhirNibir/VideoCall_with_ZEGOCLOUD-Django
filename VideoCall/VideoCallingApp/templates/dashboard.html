@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block title %} Login page {% endblock %}
+{% block content %}
+<div class="container">
+    <h1 style="text-align: center; font-size: 50px;">Welcome, {{first_name}}!</h1>
+    <div class="d-grid gap-2">
+        <button class="btn btn-primary" type="button"><a style="color: white; text-decoration: none;" href="{% url 'meeting' %}">New Meeting</a></button>
+        <button class="btn btn-primary" type="button">Join Meeting</button>
+        <button class="btn btn-primary" type="button"><a style="color: white; text-decoration: none;" href="{% url 'logout' %}">Logout</a></button>
+      </div>
+  </div>
+
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+    .container {
+      max-width: 500px;
+      margin: 200px auto;
+    }
+    .container button{
+        padding: 15px;
+    }
+  </style>
+{% endblock %}
+
